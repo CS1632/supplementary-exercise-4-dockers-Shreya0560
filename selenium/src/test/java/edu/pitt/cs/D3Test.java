@@ -60,7 +60,7 @@ public class D3Test {
     driver.findElement(By.linkText("Catalog")).click();
     WebElement secondImage = driver.findElements(By.xpath("//li[2]/img")).get(0);
     String srcAttribute = secondImage.getAttribute("src");
-    assertEquals(srcAttribute, "https://cs1632.appspot.com/images/cat2.jpg");
+    assertEquals(srcAttribute, "http://localhost:8080/images/cat2.jpg");
   }
   @Test
   public void tEST4LISTING() {
@@ -149,7 +149,7 @@ public class D3Test {
   }
   @Test
   public void tEST11GREETACATWITHNAME() {
-    driver.get("http://localhost:8080");
+    driver.get("http://localhost:8080/greet-a-cat/Jennyanydots");
     assertThat(driver.findElement(By.cssSelector("#greeting > h4")).getText(), is("Meow! from Jennyanydots."));
   }
   @Test
