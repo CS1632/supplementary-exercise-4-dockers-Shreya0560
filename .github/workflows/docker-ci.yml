@@ -17,7 +17,9 @@ jobs:
       contents: read
 
     steps:
-
+      - name: Wait for Web Service 
+        run:  wait-for-webserver.sh
+      
       - name: Checkout repository
         uses: actions/checkout@v3
 
